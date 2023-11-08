@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ReservaHotel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
@@ -25,3 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Reserva_Hotel_Angular
+
+
+Este projeto é uma aplicação que permite aos clientes fazerem reservas em hotéis, com distinção entre clientes comuns e VIP. Além disso, a aplicação fornece uma lista de reservas ativas e permite gerenciá-las de forma eficiente.
+
+>>>>>>> 6fd9557c9d5be2262ef5c303189ca1bd20eaa46f
