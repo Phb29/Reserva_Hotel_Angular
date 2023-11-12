@@ -1,10 +1,23 @@
-<div class= "container" >
- <div class="jumbotron" >
-<h1>Reserva hotel</h1>
-<p>Projeto aplicando pilar orientação objeto</p>
-</div>
-
-<div>
-
-</div>
+<div class="container" fxLayout="column" >
+    <div class="jumbotron">
+        <h1>Reserva hotel</h1>
+        <p class="lead">Projeto aplicando pilar orientação objeto</p>
+    </div>
+    <h2>Detalhes da reserva</h2>
+    <div class="form-group" fxLayout="column" fxLayoutGap="10px">
+        <label>Nome:</label>
+        <input type="form-control" class="form-control" placeholder="Nome do cliente">
+    </div>
+    <div class="form-group" fxLayout="column" fxLayoutGap="10px">
+        <label>Tipo</label>
+        <select class="form-control">
+            <option value="normal">Normal</option>
+            <option value="vip">Vip</option>
+        </select>
+    </div>
+    <div class="form-group" fxLayout="column" fxLayoutGap="10px">
+        <label>Quantidade Dias</label>
+        <input type="number" class="form-control" min="1" placeholder="Quantidade de dias">
+    </div>
+    <button class="btn btn-primary">Fazer Reserva</button>
 </div>
