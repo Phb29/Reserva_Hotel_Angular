@@ -6,18 +6,18 @@
     <h2>Detalhes da reserva</h2>
     <div class="form-group" fxLayout="column" fxLayoutGap="10px">
         <label>Nome:</label>
-        <input type="form-control" class="form-control" placeholder="Nome do cliente">
+        <input [(ngModel)]="cliente.nome" type="form-control" class="form-control" placeholder="Nome do cliente">
     </div>
     <div class="form-group" fxLayout="column" fxLayoutGap="10px">
         <label>Tipo</label>
-        <select class="form-control">
+        <select [(ngModel)]="tipoCliente"  class="form-control">
             <option value="normal">Normal</option>
             <option value="vip">Vip</option>
         </select>
     </div>
     <div class="form-group" fxLayout="column" fxLayoutGap="10px">
         <label>Quantidade Dias</label>
-        <input type="number" class="form-control" min="1" placeholder="Quantidade de dias">
+        <input [(ngModel)]="quantidadeDidas" type="number" class="form-control" min="1" placeholder="Quantidade de dias">
     </div>
-    <button class="btn btn-primary">Fazer Reserva</button>
+    <button (click)="reserva()" class="btn btn-primary">Fazer Reserva</button>
 </div>
