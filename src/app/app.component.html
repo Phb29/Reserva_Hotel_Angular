@@ -1,4 +1,4 @@
-<div class="container" fxLayout="column" >
+<div class="container" fxLayout="column">
     <div class="jumbotron">
         <h1>Reserva hotel</h1>
         <p class="lead">Projeto aplicando pilar orientação objeto</p>
@@ -6,18 +6,44 @@
     <h2>Detalhes da reserva</h2>
     <div class="form-group" fxLayout="column" fxLayoutGap="10px">
         <label>Nome:</label>
-        <input [(ngModel)]="cliente.nome" type="form-control" class="form-control" placeholder="Nome do cliente">
+        <input [(ngModel)]="cliente.nome" type="text" class="form-control" placeholder="Nome do cliente">
+
     </div>
     <div class="form-group" fxLayout="column" fxLayoutGap="10px">
         <label>Tipo</label>
-        <select [(ngModel)]="tipoCliente"  class="form-control">
+        <select [(ngModel)]="tipoCliente" class="form-control">
             <option value="normal">Normal</option>
             <option value="vip">Vip</option>
         </select>
     </div>
     <div class="form-group" fxLayout="column" fxLayoutGap="10px">
         <label>Quantidade Dias</label>
-        <input [(ngModel)]="quantidadeDidas" type="number" class="form-control" min="1" placeholder="Quantidade de dias">
+        <input [(ngModel)]="quantidadeDias" type="number" class="form-control" min="1" placeholder="Quantidade de dias">
     </div>
     <button (click)="reserva()" class="btn btn-primary">Fazer Reserva</button>
+
+    <div class="mt-4" *ngIf="hotelService.getReserva().length >0">
+        <h2>Lista de hotel de Reserva</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Tipo</th>
+                    <th>Quarto</th>
+                    <th>Quantidade Dias</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>    
+        <tbody>
+            <tr *ngFor="let reserva of hotelService.getReserva()">
+                <td>{{reserva.cliente.nome}}</td>
+                <td>{{reserva.cliente.tipo}}</td>
+                <td>{{reserva.quarto.tipo}}</td>
+                <td>{{reserva.quantidadeDias}}</td>
+                <td> RS${{reserva.valorTotal()}}</td>
+            </tr>
+        </tbody>
+   </table>
+    </div>
+
 </div>

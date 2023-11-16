@@ -13,7 +13,7 @@ export class HotelService {
   constructor() { }
 
   setCliente(cliente: any) {
-    this.cliente = this.cliente;
+    this.cliente = cliente;
   }
   getCliente(): Cliente {
     return this.cliente;
